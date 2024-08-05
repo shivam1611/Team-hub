@@ -6,3 +6,12 @@
   text-decoration: none;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+/* root-color-theory  */
+
+:root{
+  --light-bg-offwhite:#F2F2F2;
+  --white:white;
+  --off-blue:#00a8a8;
+  
+}

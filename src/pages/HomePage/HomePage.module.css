@@ -1,0 +1,18 @@
+/* CSS for the Home Page  */
+.page {
+  background-color: rgb(240, 240, 240);
+  position: relative;
+  height: 100vh;
+  
+}
+
+.container {
+  border-radius: .1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 35rem;
+}
