@@ -1,17 +1,19 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
 }
 
 /* root-color-theory  */
 
-:root{
-  --light-bg-offwhite:#F2F2F2;
-  --white:white;
-  --off-blue:#00a8a8;
-  
+:root {
+  --light-bg-offwhite: #f2f2f2;
+  --white: white;
+  --black: #16161d;
+  --off-blue: #00a8a8;
 }
