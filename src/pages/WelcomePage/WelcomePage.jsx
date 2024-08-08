@@ -8,8 +8,8 @@ function WelcomePage() {
         <div className={classes.container}>
             <h1>Welcome to Team Hub</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non asperiores optio eius illum itaque pariatur corrupti rerum dolor possimus quam.</p>
-            <Link to='authentication'>
-            <button>Access</button>
+            <Link to='createAdmin'>
+            <button>Create Admin</button>
             </Link>
         </div>
     </motion.div>
