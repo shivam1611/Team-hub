@@ -4,7 +4,9 @@ import HomePage from "./pages/HomePage/HomePage";
 import AdminForm from "./components/AdminForm/AdminForm";
 import UserForm from "./components/UserForm/UserForm";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
+import AdminPanel from "./pages/AdminPanel/AdminPanel";
 import CreateAdmin from "./pages/CreateAdmin/CreateAdmin";
+
 
 function App() {
   return (
@@ -19,8 +21,9 @@ function App() {
           <Route path="user" element={<UserForm />} />
         </Route>
 
-        <Route path="admin" element={<AdminPage />} />
+        <Route path="/admin" element={<AdminPage />} />
 
+        <Route path="/adminPanel" element={<AdminPanel />} />
       </Routes>
     </BrowserRouter>
   );

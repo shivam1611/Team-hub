@@ -1,3 +1,4 @@
+
 // initial state for the admin
 
 const initialState = {
@@ -13,7 +14,7 @@ const initialState = {
 
 // REDUCER FUNCTION FOR THE ADMIN
 
-export default function reducer(action, state = initialState) {
+export default function adminReducer(state = initialState, action) {
   switch (action.type) {
     case "admin/createAdmin":
       return {
@@ -26,17 +27,27 @@ export default function reducer(action, state = initialState) {
         admin_username: action.payload.admin_username,
         admin_password: action.payload.admin_password,
       };
-    case "admin/updatepassword":
+    case "admin/updatePassword":
       if (state.admin_password === action.payload) {
         alert("Same Passowrd");
       }
       return { ...state, admin_password: action.payload };
+    default:
+      return state;
   }
 }
 
 // ACTION FUNTIONS
 
-export function createAdmin(name, surname, phone, email, adress, username, password) {
+export function createAdmin(
+  name,
+  surname,
+  phone,
+  email,
+  address,
+  username,
+  password
+) {
   return {
     type: "admin/createAdmin",
     payload: {
@@ -44,13 +55,14 @@ export function createAdmin(name, surname, phone, email, adress, username, passw
       admin_surname: surname,
       admin_phone: phone,
       admin_email: email,
-      admin_adress: adress,
+      admin_address: address,
       admin_username: username,
-      admin_password:password
+      admin_password: password,
     },
   };
 }
 
-export function updatepassword(password){
-    return {type:"admin/updatePassword",payload:password}
+export function updatepassword(password) {
+  return { type: "admin/updatePassword", payload: password };
 }
+
