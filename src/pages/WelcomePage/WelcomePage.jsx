@@ -1,8 +1,10 @@
 import classes from './WelcomePage.module.css'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {motion} from 'framer-motion'
 
+
 function WelcomePage() {
+  const navigate = useNavigate()
   return (
     <motion.div  className={classes.welcomePage}>
         <div className={classes.container}>

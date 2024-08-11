@@ -1,4 +1,9 @@
+
+/* IMPORTING FONTS FROM FONTS.GOOGLE.FONTS.COM  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+
+/* CSS RESET  */
 * {
   padding: 0;
   margin: 0;
@@ -9,11 +14,72 @@
   font-weight: 500;
 }
 
-/* root-color-theory  */
+
+/* ROOT COLOR PALLETE FOR THE PROJECT  */
 
 :root {
-  --light-bg-offwhite: #f2f2f2;
-  --white: white;
-  --black: #16161d;
-  --off-blue: #00a8a8;
+
+  /* Neutral Colors  */
+  --white: #f2f2f2;
+  --black: #324b4b;
+  --gray:#95b1b0;
+
+  /* Signal Colors  */
+
+  /* RED  */
+  --danger:#FF033E;
+  --danger-hover:#ed053b;
+  --danger-clicked:#db0638;
+
+  /* GREEN  */
+  --safe-green:#018749;
+  --safe-green-hover:#13ad66;
+  --safe-green-clicked:#0b7041;
+
+  /* SHades for primary Color  */
+  --primary-normal: #00a8a8;
+  --primary-hovered:#0c9191;
+  --primary-clicked:#097878;
+
+  /* Shades foe the secondary Color  */
+  --secondary-normal:#4e619e;
+  --secondary_hover:#415187;
+  --secondary-clicked:#36436f;
+
+  /* Accent Shades  */
+  --accent-normal:#8494d5;
+  --accent-hover:#6679c9;
+  --accent-hovered:#636f9f;
+
+}
+
+/* UNIVERSAL UI COMPONENT CSS  */
+
+/* Primary Color UI*/
+.primary_button_ui{
+  background-color: var(--primary-normal);
+
+}
+.primary_button_ui:hover{
+  background-color: var(--primary-hovered);
+}
+.primary_button_ui:active{
+  background-color: var(--primary-clicked);
+
+}
+
+/* Secondary color UI  */
+.secondary_button_ui{
+  background-color: var(--secondary-normal);
+}
+.secondary_button_ui:hover{
+  background-color: var(--secondary_hover);
+}
+.secondary_button_ui:active{
+  background-color: var(--secondary-clicked);
+}
+
+.primary_button_ui, .secondary_button_ui{
+  color: var(--white);
+  transition: all .3s ease-out;
 }

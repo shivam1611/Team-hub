@@ -1,10 +1,25 @@
 .header{
     height: 4.5rem;
-    background-color: var(--off-blue);
+    background-color: var(--primary-normal);
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.left_section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.bars{
+    font-size: 2rem;
+    color: var(--white);
+}
+.bars:hover{
+    color: var(--gray);
+    cursor: pointer;
+
 }
 .heading{
     font-size: 1.3rem;

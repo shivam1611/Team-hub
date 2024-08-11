@@ -1,11 +1,17 @@
 import { useState } from "react";
 import classes from "./CreateAdmin.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createAdmin } from "../../DataStore/AdminState/Admin";
 function CreateAdmin() {
+
+  // Dispatcher for the dispatching the state change 
   const dispatch = useDispatch();
 
+  // Navigate hook used to navigate betwwen different pages 
+  const navigate = useNavigate()
+
+  // Selecting the admin state from the store using useSelector hook 
   const admin = useSelector((store) => store.admin);
 
   // Creating states for the admin Data
@@ -41,6 +47,7 @@ function CreateAdmin() {
     dispatch(
       createAdmin(name, surname, phone, email, address, username, password)
     );
+    navigate("/authentication")
     setName("");
     setSurname("");
     setAddress("");

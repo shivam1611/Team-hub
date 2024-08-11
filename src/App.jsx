@@ -6,9 +6,11 @@ import UserForm from "./components/UserForm/UserForm";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import AdminPanel from "./pages/AdminPanel/AdminPanel";
 import CreateAdmin from "./pages/CreateAdmin/CreateAdmin";
+import store from "./store";
 
 
 function App() {
+  console.log(store.getState())
   return (
     <BrowserRouter>
       <Routes>
