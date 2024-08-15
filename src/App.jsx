@@ -10,7 +10,7 @@ import store from "./store";
 
 
 function App() {
-  console.log(store.getState())
+  // console.log(store.getState())
   return (
     <BrowserRouter>
       <Routes>

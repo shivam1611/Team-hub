@@ -1,5 +1,5 @@
 import classes from "./HomePage.module.css";
-import { Outlet, Link, NavLink } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 function HomePage() {
   return (
     <div className={classes.page}>
@@ -9,17 +9,17 @@ function HomePage() {
           <div className={classes.slider}>
             <NavLink
               to="user"
-              exact
+              // exact
               className={classes.section}
-              activeClassName={classes.active}
+              // activeClassName={classes.active}
             >
               <p>Member</p>
             </NavLink>
             <NavLink
               to="admin"
-              exact
+              // exact
               className={`${classes.section}`}
-              activeClassName={classes.active}
+              // activeClassName={classes.active}
             >
               {" "}
               <p>Admin</p>

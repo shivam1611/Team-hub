@@ -1,15 +1,18 @@
-
 // initial state for the admin
 
 const initialState = {
-  admin_name: "",
-  admin_surname: "",
-  admin_phone: "",
-  admin_email: "",
-  admin_address: "",
-  admin_last_login: "",
-  admin_username: "",
-  admin_password: "",
+  name: "",
+  surname: "",
+  email: "",
+  phone: "",
+  address: "",
+  gender: "",
+  username: "",
+  password: "",
+  aadhar_number: "",
+  pan_number: "",
+  dob: "",
+  img_url:""
 };
 
 // REDUCER FUNCTION FOR THE ADMIN
@@ -19,19 +22,25 @@ export default function adminReducer(state = initialState, action) {
     case "admin/createAdmin":
       return {
         ...state,
-        admin_name: action.payload.admin_name,
-        admin_surname: action.payload.admin_surname,
-        admin_phone: action.payload.admin_phone,
-        admin_email: action.payload.admin_email,
-        admin_address: action.payload.admin_address,
-        admin_username: action.payload.admin_username,
-        admin_password: action.payload.admin_password,
+        ...action.payload,
+        name: action.payload.name,
+        surname: action.payload.surname,
+        phone: action.payload.phone,
+        email: action.payload.email,
+        address: action.payload.address,
+        username: action.payload.username,
+        password: action.payload.password,
+        gender: action.payload.gender,
+        pan_number: action.payload.pan_number,
+        aadhar_number: action.payload.aadhar_number,
+        dob: action.payload.dob,
+        img_url:action.payload.img_url
       };
     case "admin/updatePassword":
-      if (state.admin_password === action.payload) {
+      if (state.password === action.payload) {
         alert("Same Passowrd");
       }
-      return { ...state, admin_password: action.payload };
+      return { ...state, password: action.payload };
     default:
       return state;
   }
@@ -39,25 +48,22 @@ export default function adminReducer(state = initialState, action) {
 
 // ACTION FUNTIONS
 
-export function createAdmin(
-  name,
-  surname,
-  phone,
-  email,
-  address,
-  username,
-  password
-) {
+export function createAdmin(adminData) {
   return {
     type: "admin/createAdmin",
     payload: {
-      admin_name: name,
-      admin_surname: surname,
-      admin_phone: phone,
-      admin_email: email,
-      admin_address: address,
-      admin_username: username,
-      admin_password: password,
+      name: adminData.name,
+      surname: adminData.surname,
+      phone: adminData.phone,
+      email: adminData.email,
+      address: adminData.address,
+      username: adminData.username,
+      password: adminData.password,
+      gender: adminData.gender,
+      aadhar_number: adminData.aadhar_number,
+      pan_number: adminData.pan_number,
+      dob: adminData.dob,
+      img_url:adminData.img_url
     },
   };
 }
@@ -65,4 +71,3 @@ export function createAdmin(
 export function updatepassword(password) {
   return { type: "admin/updatePassword", payload: password };
 }
-

@@ -23,7 +23,7 @@ function AdminPanel() {
         }
         <div className={classes.left_section}>
         <i onClick={()=>setSidebar(true)} className={`fa-solid fa-bars-staggered ${classes.bars}`}></i>
-          <p className={classes.heading}>Hello {admin.admin_name} </p>
+          <p className={classes.heading}>Hello {admin.name} </p>
         </div>
         <div className={classes.center}>
           <input

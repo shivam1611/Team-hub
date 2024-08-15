@@ -5,6 +5,7 @@
 
 /* CSS RESET  */
 * {
+  
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -12,6 +13,10 @@
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
+}
+body{
+  overflow: hidden;
+
 }
 
 
@@ -82,4 +87,30 @@
 .primary_button_ui, .secondary_button_ui{
   color: var(--white);
   transition: all .3s ease-out;
+  border: none;
+  border-radius: .3rem;
+}
+
+
+/* SCROLL BAR DESIGN DEFAULT  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-normal);
+  border-radius: .1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hovered);
 }

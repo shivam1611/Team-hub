@@ -19,8 +19,8 @@ function AdminForm() {
   function handleAdminForm(e) {
     e.preventDefault();
     if (
-      inputUsername == admin.admin_username &&
-      inputAdminPassword == admin.admin_password
+      inputUsername == admin.username &&
+      inputAdminPassword == admin.password
     ) {
       navigate("/adminPanel");
     } else {

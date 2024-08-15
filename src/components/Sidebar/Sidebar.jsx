@@ -1,8 +1,12 @@
+import { useSelector } from "react-redux";
 import Logo from "../Logo/Logo";
 import classes from "./Sidebar.module.css";
+import { motion } from "framer-motion";
 function Sidebar({setSidebar}) {
+
+  const admin = useSelector(store=>store.admin)
   return (
-    <div className={classes.sidebar}>
+    <motion.div initial={{x:-10, opacity:.5}} animate={{x:0,opacity:1}} className={classes.sidebar}>
       <div className={classes.top_control}>
       <i onClick={()=>setSidebar(false)} className={`fa-solid fa-circle-xmark ${classes.off_cross}`}></i>
       </div>
@@ -14,12 +18,12 @@ function Sidebar({setSidebar}) {
       <div className={classes.profile_section}>
         <div className={classes.image_section}>
           <img
-            src="https://wamu.org/wp-content/uploads/2024/05/spongebobsquarepants_key_art_wide-429bee20400a15a76c1a617985c74db87bd09d98-1500x844.jpg"
+            src={ admin.img_url }
             alt="Admin Image"
           />
           <i className={`fa-solid fa-pen ${classes.edit_icon}`}></i>
         </div>
-        <div className={classes.admin_name}> Raj Chaddha</div>
+        <div className={classes.admin_name}> {admin.name} {admin.surname}</div>
         <div className={classes.designation}>Team Leader</div>
         <div className={classes.id_number}>ID:00121245</div>
       </div>
@@ -53,7 +57,7 @@ function Sidebar({setSidebar}) {
           Last Login : 23 Dec, 2024
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

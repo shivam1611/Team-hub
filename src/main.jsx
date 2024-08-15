@@ -4,7 +4,6 @@ import App from "./App.jsx";
 import "./index.css";
 import { Provider } from "react-redux";
 import store from "./store.js";
-import { createAdmin } from "./DataStore/AdminState/Admin.js";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
