@@ -2,13 +2,27 @@ import { useSelector } from "react-redux";
 import Logo from "../Logo/Logo";
 import classes from "./Sidebar.module.css";
 import { motion } from "framer-motion";
-function Sidebar({setSidebar}) {
+import { Link, useNavigate } from "react-router-dom";
+function Sidebar({ setSidebar }) {
+  const admin = useSelector((store) => store.admin);
 
-  const admin = useSelector(store=>store.admin)
+  const navigate = useNavigate()
+
+  function handlePage(){
+    navigate("/createUser")
+
+  }
   return (
-    <motion.div initial={{x:-10, opacity:.5}} animate={{x:0,opacity:1}} className={classes.sidebar}>
+    <motion.div
+      initial={{ x: -10, opacity: 0.5 }}
+      animate={{ x: 0, opacity: 1 }}
+      className={classes.sidebar}
+    >
       <div className={classes.top_control}>
-      <i onClick={()=>setSidebar(false)} className={`fa-solid fa-circle-xmark ${classes.off_cross}`}></i>
+        <i
+          onClick={() => setSidebar(false)}
+          className={`fa-solid fa-circle-xmark ${classes.off_cross}`}
+        ></i>
       </div>
 
       <h1 className={classes.title}>
@@ -17,13 +31,13 @@ function Sidebar({setSidebar}) {
 
       <div className={classes.profile_section}>
         <div className={classes.image_section}>
-          <img
-            src={ admin.img_url }
-            alt="Admin Image"
-          />
+          <img src={admin.img_url} alt="Admin Image" />
           <i className={`fa-solid fa-pen ${classes.edit_icon}`}></i>
         </div>
-        <div className={classes.admin_name}> {admin.name} {admin.surname}</div>
+        <div className={classes.admin_name}>
+          {" "}
+          {admin.name} {admin.surname}
+        </div>
         <div className={classes.designation}>Team Leader</div>
         <div className={classes.id_number}>ID:00121245</div>
       </div>
@@ -35,17 +49,17 @@ function Sidebar({setSidebar}) {
             </span>
             Members<span className={classes.total}>30</span>{" "}
           </ol>
-          <ol>
+          <ol onClick={()=>handlePage()}>
             <span className={classes.icon}>
               <i className="fa-solid fa-user-plus"></i>
             </span>
-            Add Members<span></span>{" "}
+            Add Members<span></span>
           </ol>
           <ol>
             <span className={classes.icon}>
               <i className="fa-solid fa-user-tie"></i>
             </span>
-            Admin Details<span></span>{" "}
+            Admin Details<span></span>
           </ol>
         </ul>
       </div>
@@ -53,7 +67,7 @@ function Sidebar({setSidebar}) {
         <div className={classes.login_detail}>
           <span className={classes.icon}>
             <i className="fa-regular fa-clock"></i>
-          </span>{" "}
+          </span>
           Last Login : 23 Dec, 2024
         </div>
       </div>

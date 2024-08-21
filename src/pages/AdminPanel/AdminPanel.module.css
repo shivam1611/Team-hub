@@ -37,11 +37,48 @@
 }
 
 .danger_button{
-    background-color: rgb(225, 51, 51);
+    background-color: var(--danger);
     width: 6rem;
     border: none;
     height: 2.5rem;
     border-radius: .4rem;
     color: var(--white);
     font-size: 1rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--danger-hover);
+    }
+    &:active{
+        background-color: var(--danger-clicked);
+    }
+}
+
+.float_btn{
+    position: fixed;
+    right: 6vw;
+    bottom: 12vh;
+}
+
+.float_btn button{
+    font-size: 1.5rem;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    border: none;
+    background-color: var(--safe-green);
+    color: var(--white);
+    transition: all .3s ease;
+ 
+    &:hover{
+        background-color: var(--safe-green-hover);
+        scale: 1.1;
+    }
+    &:active{
+        background-color: var(--safe-green-clicked);
+    }
 }

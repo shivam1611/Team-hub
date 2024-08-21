@@ -47,6 +47,7 @@
   font-weight: 600;
 }
 
+
 .image_section {
   width: 5.5rem;
   height: 5.5rem;
@@ -109,6 +110,7 @@
   color: var(--black);
   font-weight: 600;
   cursor: pointer;
+  
 }
 .icon {
   padding-inline: 1rem;

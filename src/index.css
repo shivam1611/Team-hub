@@ -25,20 +25,21 @@ body{
 :root {
 
   /* Neutral Colors  */
-  --white: #f2f2f2;
+  --white: #ffffff;
+  --off-white:#eeeeee;
   --black: #324b4b;
-  --gray:#95b1b0;
+  --gray:#869594;
 
   /* Signal Colors  */
 
   /* RED  */
-  --danger:#FF033E;
-  --danger-hover:#ed053b;
+  --danger:#ee0d41;
+  --danger-hover:#f70e45;
   --danger-clicked:#db0638;
 
   /* GREEN  */
-  --safe-green:#018749;
-  --safe-green-hover:#13ad66;
+  --safe-green:#05be68;
+  --safe-green-hover:#0e9858;
   --safe-green-clicked:#0b7041;
 
   /* SHades for primary Color  */

@@ -14,9 +14,16 @@ function AdminPanel() {
   const handleSignOutButton = () =>{
     navigate("/authentication", {replace:true})
   }
+
+  function handlePage(){
+    navigate("/createUser")
+  }
   const admin = useSelector((store) => store.admin);
   return (
     <div>
+      <div onClick={()=>handlePage()} className={classes.float_btn}>
+        <button><i className="fa-solid fa-user-plus"></i></button>
+      </div>
       <div className={classes.header}>
         {sidebar &&
         <Sidebar setSidebar={setSidebar}/>

@@ -7,6 +7,8 @@ import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import AdminPanel from "./pages/AdminPanel/AdminPanel";
 import CreateAdmin from "./pages/CreateAdmin/CreateAdmin";
 import store from "./store";
+import UserPage from "./pages/UserPage/UserPage";
+import CreateUser from "./pages/CreateUser/CreateUser";
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         <Route path="/admin" element={<AdminPage />} />
 
         <Route path="/adminPanel" element={<AdminPanel />} />
+        <Route path ='/userData' element={<UserPage/>}/>
+        <Route path="/createUser" element={<CreateUser/>}/>
       </Routes>
     </BrowserRouter>
   );

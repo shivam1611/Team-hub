@@ -53,7 +53,7 @@ input{
     margin-top: 1rem;
     height: 2.7rem;
     border: none;
-    background-color: var(--off-blue);
+    background-color:var(--primary-normal);
     color: var(--white);
     font-size: 1.1rem;
     border-radius: .3rem;
